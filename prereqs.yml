@@ -1,0 +1,5 @@
+---
+- name: Install the Avi SDK Python package
+  pip:
+    name: file:{{ playbook_dir }}/src/avisdk-18.2.2.tar.gz
+    virtualenv: /home/asteer/PycharmProjects/falcon_runner/venv

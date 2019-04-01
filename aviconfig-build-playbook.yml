@@ -8,6 +8,8 @@
     - applications.yml
 
   tasks:
+    - include: prereqs.yml
+
     - include: avi_builder.yml
       with_items: "{{ applications }}"
       loop_control:
