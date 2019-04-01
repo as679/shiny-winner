@@ -1,6 +1,6 @@
 applications:
   - tenant: admin
-    desired_state: absent
+    desired_state: present
     name: test_one
     hm_type: ping
     np_type: tcp
@@ -9,7 +9,7 @@ applications:
       "172.21.1.21": "80"
       "172.21.1.22": "80"
   - tenant: admin
-    desired_state: absent
+    desired_state: present 
     name: another_test
     hm_type: tcp
     np_type: tcp
