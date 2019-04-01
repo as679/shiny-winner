@@ -31,9 +31,8 @@
     - "{{ avi_analyticsprofile_json }}"
     - "{{ avi_virtualservice_json }}"
 
-- copy:
-    content: "{{ avi_config }}"
-    dest: applications.output.json
+- debug:
+    var: avi_config
 
 - import_role:
     name: avinetworks.aviconfig
