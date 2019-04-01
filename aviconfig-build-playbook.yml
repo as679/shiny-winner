@@ -1,0 +1,13 @@
+---
+- hosts: localhost
+  connection: local
+  vars_files:
+    - credentials.yml
+    - applications.yml
+
+  tasks:
+    - include: avi_builder.yml
+      with_items: "{{ applications }}"
+      loop_control:
+        loop_var: application
+
